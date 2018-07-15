@@ -55,7 +55,7 @@ class Map extends Component {
   }
 
   checkStationsEnd = (latLng) => {
-    fetch(velibAPI + '&exclude.capacity=0&geofilter.distance=' + latLng.lat + '%2C' + latLng.lng + '%2C' + 500 )
+    fetch(velibAPI + '&exclude.numdocksavailable=0&geofilter.distance=' + latLng.lat + '%2C' + latLng.lng + '%2C' + 500 )
       .then(response => response.json())
       .then(data => {
         console.log(velibAPI + '&geofilter.distance=' + latLng.lat + '%2C' + latLng.lng + '%2C' + 500 )
